@@ -1,0 +1,11 @@
+export const NET_REQUEST="NET_REQUEST"
+
+
+export const GET_SUCCESS="GET_SUCCESS"
+export const POST_SUCCESS="POST_SUCCESS"
+export const PUT_SUCCESS="PUT_SUCCESS"
+export const PATCH_SUCCESS="PATCH_SUCCESS"
+export const DELETE_SUCCESS="DELETE_SUCCESS"
+
+
+export const NET_FAILURE="NET_FAILURE"
