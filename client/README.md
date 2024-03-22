@@ -5,4 +5,4 @@
 3. npm install -D tailwindcss postcss autoprefixer	
 4. npx tailwindcss init -p
 5. npm i react-router-dom
-6. 
+6. npm i axios
