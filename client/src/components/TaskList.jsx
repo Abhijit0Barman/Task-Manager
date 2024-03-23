@@ -4,12 +4,12 @@ import { netFailure, netRequest } from './../redux/tasks/action';
 import axios from "axios";
 import { TaskInput } from "./TaskInput";
 
-const URL=""
+const URL="https://task-manager-virt.onrender.com/api/tasks"
 
 export const TaskList = () => {
-    const [page, setPage] = useState(1);
+    // const [page, setPage] = useState(1);
     const [render, setRender] = useState(true);
-    const [limit, setLimit] = useState(10);
+    // const [limit, setLimit] = useState(10);
     const dispatch = useDispatch();
 
     const { tasks, isLoading, isError } = useSelector((store) => {
@@ -22,7 +22,7 @@ export const TaskList = () => {
 
     const getTask=(paramObj)=>{
         dispatch(netRequest())
-        axios.get(`${URL}/tasks`,paramObj).then(res=>{
+        axios.get(URL,paramObj).then(res=>{
             dispatch(getTask(res.data))
         }).catch(err=>{
             dispatch(netFailure())
@@ -36,7 +36,7 @@ export const TaskList = () => {
                 _limit:limit,
             },
         }
-        getTask(paramObj)
+        // getTask(paramObj)
     },[page,limit])
 
     const paginate=(pageNo)=>{

@@ -9,3 +9,6 @@ export const loginSuccess = (payload) => {
 export const loginFailure = () => {
     return { type: NET_FAILURE };
 };
+export const logoutSuccess = () => {
+    return { type: LOGOUT_SUCCESS };
+};

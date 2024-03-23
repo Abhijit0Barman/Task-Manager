@@ -26,7 +26,8 @@ export const reducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 isLoading: false,
-                tasks: [...state.tasks, payload],
+                tasks: payload,
+                // tasks: [...state.tasks, payload],
             };
         }
 

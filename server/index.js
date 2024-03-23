@@ -14,7 +14,9 @@ const URL = process.env.MONGO_URL;
 //MIDDLEWARE
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: '*',
+}));
 app.use(logReqRes("log.txt"));
 app.use("/api/users", userRouter);
 app.use("/api/tasks", auth, taskRouter);
