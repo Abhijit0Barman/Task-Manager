@@ -7,9 +7,6 @@
 
 ## Backend-Deployed-Link: https://task-manager-virt.onrender.com/
 
-### For Some Reason If you saw the below picture just click on the ` Back to our site` and it will work Perfectly 👌
-![Screenshot 2024-03-24 144525](https://github.com/Abhijit0Barman/Task-Manager/assets/113384779/6aab9748-deb2-4d1e-a981-1637dad272b8)
-
 
 #Routes
 1. https://task-manager-virt.onrender.com ---->Default Route(ServerSideRendering) 
@@ -21,6 +18,13 @@
 7. https://task-manager-virt.onrender.com/api/users/:id ------>GET/PATCH/DELETE FOR USERS
 8. https://task-manager-virt.onrender.com/api/tasks  -------->POST/GET FORALL TASK
 9. https://task-manager-virt.onrender.com/api/tasks/:id  -------->GET/PATCH/DELETE FRO SINGLE TASK
+
+***
+
+### For Some Reason If you saw the below picture just click on the ` Back to our site` and it will work Perfectly 👌
+##### Click Here : https://65ffee7afe5188b70a75a09c--exquisite-snickerdoodle-9cea48.netlify.app/login
+![Screenshot 2024-03-24 144525](https://github.com/Abhijit0Barman/Task-Manager/assets/113384779/6aab9748-deb2-4d1e-a981-1637dad272b8)
+
 
 ***
 
