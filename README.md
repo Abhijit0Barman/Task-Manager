@@ -1,19 +1,20 @@
 # Task-Manager
-##Deployment-Links
-Netlify: https://65ffe57f7fedffabe75436c9--stellar-hotteok-b63c23.netlify.app/login
+## Deployment-Links
 
-Vercel: https://client-nuw0l64os-abhijit0barmans-projects.vercel.app/
+### Netlify: https://65ffe57f7fedffabe75436c9--stellar-hotteok-b63c23.netlify.app/login
 
-Backend-Deployed-Link: https://task-manager-virt.onrender.com/
+### Vercel: https://client-nuw0l64os-abhijit0barmans-projects.vercel.app/
+
+## Backend-Deployed-Link: https://task-manager-virt.onrender.com/
 
 
 #Routes
 1. https://task-manager-virt.onrender.com ---->Default Route(ServerSideRendering) 
 2. https://task-manager-virt.onrender.com/refresh ---->Refresh Token
 3. https://task-manager-virt.onrender.com/api/users ------>GET ALL USERS
-4. https://task-manager-virt.onrender.com/api/users/register
-5. https://task-manager-virt.onrender.com/api/users/login
-6. https://task-manager-virt.onrender.com/api/users/logout
+4. https://task-manager-virt.onrender.com/api/users/register ----->USER SIGNUP
+5. https://task-manager-virt.onrender.com/api/users/login  ------>USER LOGIN
+6. https://task-manager-virt.onrender.com/api/users/logout ------>USER LOGOUT
 7. https://task-manager-virt.onrender.com/api/users/:id ------>GET/PATCH/DELETE FOR USERS
 8. https://task-manager-virt.onrender.com/api/tasks  -------->POST/GET FORALL TASK
 9. https://task-manager-virt.onrender.com/api/tasks/:id  -------->GET/PATCH/DELETE FRO SINGLE TASK
