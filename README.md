@@ -1,4 +1,6 @@
 # Task-Manager
+## Brief-Intro [youtube]: https://www.youtube.com/watch?v=f_q3FZPp85c
+
 ## Deployment-Links
 
 ### Netlify: https://65ffe57f7fedffabe75436c9--stellar-hotteok-b63c23.netlify.app/login
