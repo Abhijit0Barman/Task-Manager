@@ -1,6 +1,6 @@
 import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
-import { reducer as authReducer } from "./authentication/reducer";
-import { reducer as taskReducer } from "./tasks/reducer";
+import { reducer as authReducer } from "./authReducer/reducer";
+import { reducer as taskReducer } from "./taskReducer/reducer";
 import {thunk} from "redux-thunk";
 
 

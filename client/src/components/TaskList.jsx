@@ -1,68 +1,59 @@
-import { useEffect, useState } from "react";
-import { useDispatch,shallowEqual,useSelector } from "react-redux";
-import { netFailure, netRequest } from './../redux/tasks/action';
-import axios from "axios";
-import { TaskInput } from "./TaskInput";
+import { useEffect } from "react";
+import { useDispatch, shallowEqual, useSelector } from "react-redux";
+import { getAllTask } from "./../redux/taskReducer/action";
 
-const URL="https://task-manager-virt.onrender.com/api/tasks"
-
-export const TaskList = () => {
-    // const [page, setPage] = useState(1);
-    const [render, setRender] = useState(true);
-    // const [limit, setLimit] = useState(10);
+export const TaskList = ({ren}) => {
     const dispatch = useDispatch();
 
-    const { tasks, isLoading, isError } = useSelector((store) => {
+    const { tasks, isLoading, token } = useSelector((store) => {
         return {
             tasks: store.taskReducer.tasks,
             isLoading: store.taskReducer.isLoading,
-            isError: store.taskReducer.isError,
+            token: store.authReducer.token,
         };
     }, shallowEqual);
 
-    const getTask=(paramObj)=>{
-        dispatch(netRequest())
-        axios.get(URL,paramObj).then(res=>{
-            dispatch(getTask(res.data))
-        }).catch(err=>{
-            dispatch(netFailure())
-            console.log(err);
-        })
-    }
-    useEffect(()=>{
-        const paramObj={
-            params:{
-                _page:page,
-                _limit:limit,
-            },
-        }
-        // getTask(paramObj)
-    },[page,limit])
+    // let localToken=localStorage.getItem(token)
 
-    const paginate=(pageNo)=>{
-        setPage(pageNo)
-    }
+    // const getTask = (x) => {
+    //     // dispatch(netRequest());
+    //     axios
+    //         .get(
+    //             URL,
+    //             {
+    //                 headers: { Authorization: `Bearer ${token}` },
+    //             },
+    //             x
+    //         )
+    //         .then((res) => {
+    //             console.log(res.data);
+    //             // dispatch(getSuccess(res.data));
+    //         })
+    //         .catch((err) => {
+    //             // dispatch(netFailure());
+    //             console.log(err);
+    //         });
+    // };
+
+    useEffect(() => {
+        dispatch(getAllTask(token));
+        // getTask();
+    }, [ren]);
 
     return (
-        <>
-        <h1>Add Task</h1>
-        <TaskInput setRender={setRender}/>
-        {
-            isLoading && <p>Loading...</p>
-        }
-        {
-            tasks?.map((item)=>{
-                return (
-                    <div key={item.id}>
-                        <h2>{item.title}</h2>
-                        <p>{item.description}</p>
-                    </div>
-                )
-            })
-        }
-        <div>
-            <button onClick={()=>paginate(1)}>1</button>
+        <div className="bg-[#5734E4] m-auto text-center rounded p-3 w-[500px] max-h-dvh">
+            <h1 className="text-white font-bold text-center text-[20px]">
+                Add Task
+            </h1>
+            {isLoading && <p>Loading...</p>}
+            <ul>
+                {tasks?.map((item) => (
+                    <li className="m-[20px] bg-slate-50" key={item._id}>
+                        <h2>Title: {item.title}</h2>
+                        <p>Description: {item.description}</p>
+                    </li>
+                ))}
+            </ul>
         </div>
-        </>
-    )
+    );
 };
