@@ -1,5 +1,4 @@
 # Task-Manager
-## Brief-Intro [youtube]: https://www.youtube.com/watch?v=f_q3FZPp85c
 
 ## Deployment-Links
 
